@@ -69,3 +69,87 @@ The target enemy hero is shackled to Zarok for **1 round**. The target is forced
 #### Innate — Town Portal
 
 Cooldown: 3 rounds. Teleport to any allied structure.
+
+---
+
+## Vex — The Unchained
+
+> _The streets birthed her and the streets named her. Orphaned before she could walk, Vex ran with the Gutter Court — child-thieves who taught her to read a mark's breathing, to vanish into a crowd like rain into a river. By twelve her fingers were legend among the pickpockets of the Lower Warrens. By sixteen, her fingers had found deadlier work. Nobles, merchants, rival guildmasters — her blade did not discriminate. Gold was gold._
+>
+> _The contract was unremarkable in every way but one: the price. Enough gold to vanish, become someone else, never need another job again. The target was a recluse on the edge of the city — no guards, no family, no questions asked. She found him alone in a candlelit study, his back turned. Her blade was an inch from his throat when he spoke her name. Her real name. The name no one alive should have known._
+>
+> _She never saw him move. He was no recluse — he was an Accended, a mortal who had clawed his way to godhood. "You were never the assassin," he said. "You were the delivery." The contract, the intel, her entire career — every step had been orchestrated. Someone had traded her life for something he wanted. The Nether Pits swallowed her without ceremony._
+>
+> _It took her three years to claw her way back to the living world. She does not speak of the Pits. The scars beneath her sleeves say enough._
+>
+> _Now she walks the mortal plane with one name burning in her chest: the broker who sold her. Not the Accended — he was merely the buyer. She wants the one who set the price. The one who wrote her name on a death warrant and handed her the pen. She intends to return it — point first._
+
+**Role:** Agility Hybrid Carry / Escape
+**Attack:** Melee (1 hex)
+
+### Stats
+
+| Stat | Base | Scaling |
+|---|---|---|
+| HP | 14 | +5 per level |
+| Mana | 15 | +5 per level |
+| Attack Damage | 3 | +1 at levels 3, 6, 9, 12, 15, 18 |
+| Defense | 1 | +1 at levels 6, 12, 18 |
+
+### Progression Table
+
+| Lvl | Atk | Def | HP | Mana |
+|-----|-----|-----|-----|------|
+| 1 | 3 | 1 | 19 | 20 |
+| 3 | 4 | 1 | 29 | 30 |
+| 6 | 5 | 2 | 44 | 45 |
+| 9 | 6 | 2 | 59 | 60 |
+| 12 | 7 | 3 | 74 | 75 |
+| 15 | 8 | 3 | 89 | 90 |
+| 18 | 9 | 4 | 104 | 105 |
+
+### Abilities
+
+#### Passive — Backstab
+
+Attacks made from the hex directly opposite the target's facing direction deal **+1 damage**.
+
+#### 1 — Shadow Step
+
+| Field | Value |
+|---|---|
+| Type | Targeted Blink |
+| AP Cost | 1 |
+| Mana Cost | 5 |
+| Cooldown | 1 round |
+| Range | Up to 3 hexes |
+
+Blink to any hex within range. Deal **1 damage** to any enemy occupying or adjacent to the destination hex (Vex chooses one if multiple are in range).
+
+#### 2 — Garrote
+
+| Field | Value |
+|---|---|
+| Type | Targeted |
+| AP Cost | 1 |
+| Mana Cost | 4 |
+| Cooldown | 1 round |
+| Range | 1 hex |
+
+Usable only from the hex directly opposite the target's facing direction (behind them). The target is **silenced** for 1 round — they cannot cast spells or use active abilities.
+
+#### Ultimate — Escape the Nether
+
+| Field | Value |
+|---|---|
+| Type | Self-Buff |
+| AP Cost | 2 |
+| Mana Cost | 10 |
+| Cooldown | 3 rounds |
+| Duration | 1 round |
+
+Vex becomes **untargetable** for the duration. She cannot be the target of attacks, spells, or abilities. She gains **+1 movement** and may move through hexes occupied by enemies without penalty.
+
+#### Innate — Town Portal
+
+Cooldown: 3 rounds. Teleport to any allied structure.
