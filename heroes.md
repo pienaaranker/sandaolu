@@ -76,13 +76,13 @@ Cooldown: 3 rounds. Teleport to any allied structure.
 
 > _The streets birthed her and the streets named her. Orphaned before she could walk, Vex ran with the Gutter Court — child-thieves who taught her to read a mark's breathing, to vanish into a crowd like rain into a river. By twelve her fingers were legend among the pickpockets of the Lower Warrens. By sixteen, her fingers had found deadlier work. Nobles, merchants, rival guildmasters — her blade did not discriminate. Gold was gold._
 >
-> _The contract was unremarkable in every way but one: the price. Enough gold to vanish, become someone else, never need another job again. The target was a recluse on the edge of the city — no guards, no family, no questions asked. She found him alone in a candlelit study, his back turned. Her blade was an inch from his throat when he spoke her name. Her real name. The name no one alive should have known._
+> _The contract was unremarkable in every way but one: the price. Enough gold to vanish, become someone else, never need another job again. The target was a recluse on the edge of the city — no guards, no family, no questions asked. She found him alone in a candlelit study, his back turned. Her blade was an inch from his throat when he spoke her name. Her given name, found on a scrap of paper kept in her pocket since childhood, the only remnant of her parents._
 >
-> _She never saw him move. He was no recluse — he was an Accended, a mortal who had clawed his way to godhood. "You were never the assassin," he said. "You were the delivery." The contract, the intel, her entire career — every step had been orchestrated. Someone had traded her life for something he wanted. The Nether Pits swallowed her without ceremony._
+> _She never saw him move. "A feeble attempt," he whispered in her ear. For the first time in her life, Vex froze as the man behind her walked calmly to the cabinet nearby. He poured himself a drink. "A mortal," he said, disappointed. The last thing Vex saw was a raised hand and two fingers snapping, then darkness._
 >
 > _It took her three years to claw her way back to the living world. She does not speak of the Pits. The scars beneath her sleeves say enough._
 >
-> _Now she walks the mortal plane with one name burning in her chest: the broker who sold her. Not the Accended — he was merely the buyer. She wants the one who set the price. The one who wrote her name on a death warrant and handed her the pen. She intends to return it — point first._
+> _Now she walks the mortal plane with one name burning in her chest: Aviton, the broker who sold her. The one who wrote her name on a death warrant and handed her the pen. She intends to return it — point first._
 
 **Role:** Agility Hybrid Carry / Escape
 **Attack:** Melee (1 hex)
