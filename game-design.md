@@ -62,6 +62,12 @@
 - **Fountain Healing**: Remaining inside the base fountain for at least **1 full turn** (cannot run in and out during the same turn) restores all HP and Mana to maximum.
 - **Passive Regeneration**: All heroes gain HP and Mana equal to their current **Hero Level** at the end of each round. (This passive regeneration can be augmented by specific items and abilities.)
 
+### 3.7 Attack Damage & Defense
+
+- **Attack Damage**: Defined per hero. All heroes gain **+1 attack damage** at levels 3, 6, 9, 12, 15, and 18 (every 3 levels).
+- **Defense**: Defined per hero. All heroes gain **+1 defense** at levels 6, 12, and 18 (every 6 levels).
+- **Defense Mechanic**: Defense is a flat reduction. Incoming basic attack damage is reduced by the hero's defense value, to a minimum of 1 damage. Defense does not reduce spell or ability damage unless specified.
+
 ## 4. Game Loop & Round Structure
 
 A full round of the game represents a cycle of active lane pushes, neutral farming, and defensive reactions. It is structured into 5 distinct phases:
@@ -227,8 +233,21 @@ Based on the game's gold sources (2g passive/round, 5g pawns, 10g neutrals, 15g 
   - **Heart of Tarrasque (180g)**: Passive — +25 Max HP, round-end HP regeneration increased by +5.
   - **Daedalus (150g)**: Passive — Attacks deal +3 damage.
 
+### 7.5 Skill Shots
+
+Some abilities are designated as **Skill Shots** — they require a dice roll to determine whether they hit.
+
+- **Mechanic**: Roll **1d6**. The result must be **≥ the number of hexes between the attacker and the target** for the skill shot to land.
+- **Declaration**: The attacker must declare the target and commit the AP and mana before rolling.
+- **On Miss**: The AP and mana are lost. The ability has no effect.
+- **Reaction Interaction**: If the target uses a stored **movement reaction** to reposition after the skill shot is declared but before it resolves:
+  - The effective range is recalculated based on the target's new position.
+  - If the target moves out of range entirely, the skill shot automatically misses.
+  - If the target moves farther but remains in range, the required roll increases (1d6 ≥ new distance).
+
 ## 8. Open Questions & Design Challenges
 
 ### 8.1 Hero & Ability Designs
 
-- Since we have the leveling scale (up to Level 18) and HP/Mana scaling formulas, we can begin designing the first few heroes. What archetype should we start with? (e.g., a melee tank/initiator, a ranged spellcaster, and a physical carry).
+- Hero designs are tracked separately in `heroes.md`. Remaining archetypes to design: agility carry, intelligence spellcaster, support heroes.
+- Ability interactions and balance need playtesting.
