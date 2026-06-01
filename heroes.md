@@ -96,18 +96,6 @@ Cooldown: 3 rounds. Teleport to any allied structure.
 | Attack Damage | 3 | +1 at levels 3, 6, 9, 12, 15, 18 |
 | Defense | 1 | +1 at levels 6, 12, 18 |
 
-### Progression Table
-
-| Lvl | Atk | Def | HP | Mana |
-|-----|-----|-----|-----|------|
-| 1 | 3 | 1 | 19 | 20 |
-| 3 | 4 | 1 | 29 | 30 |
-| 6 | 5 | 2 | 44 | 45 |
-| 9 | 6 | 2 | 59 | 60 |
-| 12 | 7 | 3 | 74 | 75 |
-| 15 | 8 | 3 | 89 | 90 |
-| 18 | 9 | 4 | 104 | 105 |
-
 ### Abilities
 
 #### Passive — Backstab
