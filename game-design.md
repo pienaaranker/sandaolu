@@ -3,7 +3,7 @@
 ## 1. Core Concept & Vision
 
 - **Main Objective**: Destroy the enemy's "Hive" (located in the middle of their base).
-- **Game Format**: A tactical, lane-pushing board game inspired by Dota. A 3v3 team setup (6 players/heroes total).
+- **Game Format**: A tactical, lane-pushing board game inspired by Dota. A 2-10 player game that ranges from 1v1 to 5v5.
 - **Progression**: Players draft heroes, manage action and reaction points, farm pawns/neutrals for gold and XP, buy items, and coordinate to breach the enemy base.
 
 ## 2. Map Layout & Board Design
@@ -26,8 +26,17 @@
 - **Team Size**: 3v3 (6 players/heroes total, Player 1–6).
 - **Movement**:
   - **Normal Movement**: A player can move up to **5 spaces (hexes)** per turn.
-  - **First Round Boost**: For the very first round of the game, all players start with **12 movement** and **2 actions** to speed up rollout and laning setups.
-- **Action Points**: A player has **2 Action Points (AP)** per turn.
+  - **First Round Boost**: For the very first round of the game, all players start with **12 movement** and **1 AP** to speed up rollout and laning setups.
+- **Action Points**: A player's max AP scales with their hero level:
+
+  | Level | Max AP |
+  |-------|--------|
+  | 1–4   | 1      |
+  | 5–9   | 2      |
+  | 10–14 | 3      |
+  | 15–18 | 4      |
+
+  _Start with 1 AP. Gain +1 AP at levels 5, 10, and 15._
 
 ### 3.2 Teleportation (Town Portal)
 
@@ -68,6 +77,63 @@
 - **Defense**: Defined per hero. All heroes gain **+1 defense** at levels 6, 12, and 18 (every 6 levels).
 - **Defense Mechanic**: Defense is a flat reduction. Incoming basic attack damage is reduced by the hero's defense value, to a minimum of 1 damage. Defense does not reduce spell or ability damage unless specified.
 
+### 3.8 Hero Board & Planning
+
+Each hero is represented by a **hero board** with 7 planning slots hidden behind a **planning cover** (similar to a DM screen). Players plan their turns in secret by placing tokens into these slots.
+
+#### Board Layout
+
+```
+┌───────────────────────────────────────────────────┐
+│                  PLANNING COVER                     │
+│         (hides all 7 slots until lifted)            │
+│                                                     │
+│  [Movement]   [AP1] [AP2] [AP3] [AP4]   [R1] [R2]  │
+│   (1 slot)    (action slots)      (reaction slots)  │
+└───────────────────────────────────────────────────┘
+```
+
+#### Token Types
+
+| Token | Slot | Description |
+|---|---|---|
+| Numbered Movement (1–5, 12) | Movement | Commit a maximum movement amount for this turn |
+| Attack | AP1–AP4 | Declare a basic attack |
+| Spell 1 | AP1–AP4 | Declare the hero's first basic ability (Q) |
+| Spell 2 | AP1–AP4 | Declare the hero's second basic ability (W) |
+| Spell 3 | AP1–AP4 | Declare the hero's third basic ability (E, future heroes) |
+| Ultimate | AP1–AP4 | Declare the hero's ultimate ability (R) |
+
+#### Reaction Slots
+
+The two reaction slots (R1, R2) hold tokens that define what the hero can do as a reaction during opponents' turns. Valid reaction tokens are:
+- **Movement token** (value 1) — spend to move 1 hex as a reaction.
+- **Spell token** (Spell 1, Spell 2, Spell 3, or Ultimate) — spend the appropriate spell as a reaction.
+
+Only the specific spell committed to the reaction slot may be used. A movement reaction always provides exactly 1 hex of movement, regardless of the committed movement token's value.
+
+#### Planning Flow
+
+Planning occurs **simultaneously** for all players, twice per full round:
+
+| Timing | Plans for |
+|---|---|
+| Start of **Phase 2** (Ascending) | All turns in Phase 2 (A→X→B→Y→C→Z) |
+| Start of **Phase 4** (Pendulum) | All turns in Phase 4 (Z→C→Y→B→X→A) |
+
+All players place tokens behind their covers at the same time. Once planning is complete, the turn sequence begins. When a player's turn arrives, they **lift the cover** and execute.
+
+#### Execution Rules
+
+- **Movement**: The player may move **up to** the committed movement value. The actual path and hexes are decided at execution time (not pre-planned).
+- **AP Slots**: Slots resolve in order (AP1 → AP2 → AP3 → AP4). If an action becomes impossible at execution time (no valid target, target out of range, etc.), the **AP is lost but mana is not spent and the ability does not go on cooldown**. The player then proceeds to the next AP slot.
+- **Targeting**: The specific target or hex is chosen at execution time. Only the action *type* is pre-committed.
+- **Max AP**: The number of usable AP slots is capped by the hero's max AP for their current level (see §3.1). Only the first N slots are resolved; excess tokens are ignored.
+
+#### Interaction with Reveal Abilities
+
+Abilities that reveal an enemy's planning cover (e.g., Soren's **Unveil**) allow all players to see the target's hidden tokens before that enemy's turn, exposing their intended movement, action sequence, and reaction reserves.
+
 ## 4. Game Loop & Round Structure
 
 A full round of the game represents a cycle of active lane pushes, neutral farming, and defensive reactions. It is structured into 5 distinct phases:
@@ -81,24 +147,26 @@ A full round of the game represents a cycle of active lane pushes, neutral farmi
    - **Neutrals (Jungle Creeps)**: Spawn at empty camp hexes every **3rd round** (Rounds 3, 6, 9, 12, etc.).
 4. **Determine Rotation**: Establish the player turn sequence starting with the holder of the Start Token. Turn order alternates between teams (e.g., Green Team [A, B, C] and Red Team [X, Y, Z]).
    - _Example sequence (Player A of Green Team has Start Token)_: The ascending alternating sequence is A (Green) → X (Red) → B (Green) → Y (Red) → C (Green) → Z (Red).
+5. **Planning Phase**: All players plan simultaneously behind their planning covers for the ascending half-round (Phase 2). Players place movement, AP, and reaction tokens into their hero board slots (see §3.8).
 
 ### 4.2 Phase 2: First Half-Round (Ascending Play)
 
 - Players take their turns in ascending alternating order (e.g., A → X → B → Y → C → Z).
 - **Active Turn Structure**:
-  1. **Reset Resources**: The active player resets their movement to **5 hexes** (12 hexes in Round 1) and resets their action points to **2 AP**.
+  1. **Lift Cover & Reset Resources**: The active player lifts their planning cover, revealing their tokens to all players. Their movement is set to the value of their committed movement token (up to 5 hexes, or 12 in Round 1) and their action points are set to their **max AP** for their current level (see §3.1).
   2. **Active Actions**: The player spends their movement and AP to perform actions (see Action Economy below).
-  3. **Reaction Declaration**: At the end of their turn, the player declares if they are storing unused AP or movement as **Reactions** (max 2 total reactions stored). Any unstored AP/movement is lost.
+  3. **End of Turn**: Spent tokens are discarded. Unused movement and AP are lost. Reaction tokens remain in their slots and may be used during other players' turns for the rest of this half-round.
 
 ### 4.3 Phase 3: Half-Round Checkpoint (Turnaround)
 
-- **Backpack Cooldown Progress**: As player turns progress, swapped backpack items tick down their **6-turn cooldown** (equal to the number of players). Any swaps made at the start of Phase 2 become active here.
+1. **Planning Phase**: All players plan simultaneously behind their covers for the descending half-round (Phase 4). Players place movement, AP, and reaction tokens into their hero board slots (see §3.8).
+2. **Backpack Cooldown Progress**: As player turns progress, swapped backpack items tick down their **6-turn cooldown** (equal to the number of players). Any swaps made at the start of Phase 2 become active here.
 
 ### 4.4 Phase 4: Second Half-Round (Pendulum Play)
 
 - Players take their turns in descending/reverse alternating order (e.g., Z → C → Y → B → X → A).
 - **Active Turn Structure**:
-  - Same structure as Phase 2 (reset movement, 2 AP, active actions, and reaction declaration).
+  - Same structure as Phase 2 (lift cover, reset movement and AP, active actions, end of turn).
   - Items swapped in Phase 2 are now active. Any items swapped in Phase 4 are placed on cooldown until the end of Phase 5.
 
 ### 4.5 Phase 5: Round End & Cleanup
@@ -124,11 +192,10 @@ During their turn, a player spends AP to perform the following actions:
 ### 4.7 Reaction & Dodging Mechanics
 
 - **Storing Reactions**:
-  - Up to **2 reactions** can be stored per hero. These must be declared as specific types when stored (either **Movement** or **Action**).
-  - **Strict Usage**: You must explicitly declare the specific action/movement you want to store. If you store 2 action reactions (e.g., to cast spells/attack), you cannot use one of them to move. If you store 2 movement reactions, you cannot use one of them to cast a spell or attack.
-  - **Conversion Rate**:
-    - **1 stored movement** allows **1 hex of movement** as a reaction.
-    - **1 stored action** allows **1 action** (attack, spell, item use) as a reaction.
+  - Up to **2 reaction tokens** can be placed in the reaction slots (R1, R2) during the planning phase (see §3.8).
+  - Valid reaction tokens are **movement tokens** (value 1) and **spell tokens** (Spell 1, Spell 2, Spell 3, or Ultimate).
+  - **Strict Usage**: You may only use the exact token stored. A movement reaction always grants exactly **1 hex** of movement. A spell reaction allows you to cast that specific spell only.
+  - **Reaction Carryover**: Reaction tokens unused by the end of the round carry over to the next round's planning phase (still subject to the max 2 limit).
 - **Dodging**:
   - Attacks and abilities can miss if a player uses stored movement reactions to move out of the range of the attack/spell during the attacker's turn.
   - **Attacker Penalty**: If a defender dodges an attack this way, the attacker still loses their Action Point and the action is wasted.
