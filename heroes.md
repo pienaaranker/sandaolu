@@ -192,8 +192,8 @@ When Soren would take lethal damage, he instead survives with **1 HP** and gains
 |---|---|
 | Type | Targeted |
 | AP Cost | 1 |
-| Mana Cost | 4 |
-| Cooldown | 1 round |
+| Mana Cost | 7 |
+| Cooldown | 3 round |
 | Range | 4 hexes |
 
 Reveal target enemy's planned actions and stored reactions (lift their planning cone for all players to see) for **1 round**. Deal **2 spell damage**. If the target is already revealed, deal **3 spell damage** instead.
@@ -204,7 +204,7 @@ Reveal target enemy's planned actions and stored reactions (lift their planning 
 |---|---|
 | Type | Targeted Curse |
 | AP Cost | 1 |
-| Mana Cost | 4 |
+| Mana Cost | 5 |
 | Cooldown | 1 round |
 | Range | 4 hexes |
 
