@@ -153,3 +153,89 @@ Vex becomes **untargetable** for the duration. She cannot be the target of attac
 #### Innate — Town Portal
 
 Cooldown: 3 rounds. Teleport to any allied structure.
+
+---
+
+## Soren — The Ascended
+
+> _The libraries of the old world held no answers for Soren. He devoured every scripture, debated every doctrine, knelt at every altar — and found only men's hands shaping gods in their own image. Faith, he concluded, was a mirror. He was ready to abandon the search entirely when a nameless hermit on a mountain path spoke seven words that unmade everything he knew._
+>
+> _The path to ascension demanded everything. Soren gave it willingly. His name, his station, the wife who wept at the gate, the daughter too young to understand why her father was walking into the snow. He told himself they would understand when he returned. He told himself it would be worth it._
+>
+> _Two centuries later, untouched by time and burning with cosmic truth, Soren stood before two gravestones weathered beyond reading. The hermit's final lesson — that transcendence cannot be shared, only earned — had never felt so cruel._
+>
+> _Two millennia have passed. Soren has found others like him — ascended, eternal, equally hollow. They pass the eons trying to kill one another: assassins in the dark, poisons in the cup, traps that span decades. The games are elaborate, inventive, and the only thing that still stirs his heart._
+>
+> _He tells the others he plays for the thrill. The truth is simpler: he is waiting for one of them to succeed._
+
+**Role:** Intelligence Ranged Spellcaster
+**Attack:** Ranged (2 hexes)
+
+### Stats
+
+| Stat | Base | Scaling |
+|---|---|---|
+| HP | 13 | +5 per level |
+| Mana | 18 | +5 per level |
+| Attack Damage | 1 | +1 at levels 3, 6, 9, 12, 15, 18 |
+| Defense | 1 | +1 at levels 6, 12, 18 |
+
+### Progression Table
+
+| Lvl | Atk | Def | HP | Mana |
+|-----|-----|-----|-----|------|
+| 1 | 1 | 1 | 18 | 23 |
+| 3 | 2 | 1 | 28 | 33 |
+| 6 | 3 | 2 | 43 | 48 |
+| 9 | 4 | 2 | 58 | 63 |
+| 12 | 5 | 3 | 73 | 78 |
+| 15 | 6 | 3 | 88 | 93 |
+| 18 | 7 | 4 | 103 | 108 |
+
+### Abilities
+
+#### Passive — Death's Pupil
+
+When Soren would take lethal damage, he instead survives with **1 HP** and gains **+2 spell damage** on his next ability cast. Cooldown: **6 rounds**.
+
+#### 1 — First Word: Unveil
+
+| Field | Value |
+|---|---|
+| Type | Targeted |
+| AP Cost | 1 |
+| Mana Cost | 4 |
+| Cooldown | 1 round |
+| Range | 4 hexes |
+
+Reveal target enemy's planned actions and stored reactions (lift their planning cone for all players to see) for **1 round**. Deal **2 spell damage**. If the target is already revealed, deal **3 spell damage** instead.
+
+#### 2 — Second Word: Sunder
+
+| Field | Value |
+|---|---|
+| Type | Targeted Curse |
+| AP Cost | 1 |
+| Mana Cost | 4 |
+| Cooldown | 1 round |
+| Range | 4 hexes |
+
+Place a mark on target enemy. On their next turn:
+- **If they cast a spell:** The mark detonates, dealing **6 spell damage** and **silencing** them for 1 round.
+- **If they do not cast a spell:** At the end of their turn, the mark fizzles and deals **3 spell damage**.
+
+#### Ultimate — The Seventh Word
+
+| Field | Value |
+|---|---|
+| Type | Targeted AoE |
+| AP Cost | 2 |
+| Mana Cost | 10 |
+| Cooldown | 4 rounds |
+| Range | 5 hexes |
+
+Target a hex. After a **1-round delay** (resolves at the start of Soren's next turn), all enemies within **2 hexes** of the target point take **4 spell damage** and are **silenced** for 1 round. The detonation point is marked and visible to all players — enemies may move out of the zone before it detonates.
+
+#### Innate — Town Portal
+
+Cooldown: 3 rounds. Teleport to any allied structure.
