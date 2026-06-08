@@ -168,18 +168,6 @@ Cooldown: 3 rounds. Teleport to any allied structure.
 | Attack Damage | 1 | +1 at levels 3, 6, 9, 12, 15, 18 |
 | Defense | 1 | +1 at levels 6, 12, 18 |
 
-### Progression Table
-
-| Lvl | Atk | Def | HP | Mana |
-|-----|-----|-----|-----|------|
-| 1 | 1 | 1 | 18 | 23 |
-| 3 | 2 | 1 | 28 | 33 |
-| 6 | 3 | 2 | 43 | 48 |
-| 9 | 4 | 2 | 58 | 63 |
-| 12 | 5 | 3 | 73 | 78 |
-| 15 | 6 | 3 | 88 | 93 |
-| 18 | 7 | 4 | 103 | 108 |
-
 ### Abilities
 
 #### Passive — Death's Pupil
@@ -194,7 +182,7 @@ When Soren would take lethal damage, he instead survives with **1 HP** and gains
 | AP Cost | 1 |
 | Mana Cost | 7 |
 | Cooldown | 3 round |
-| Range | 4 hexes |
+| Range | 2 hexes |
 
 Reveal target enemy's planned actions and stored reactions (lift their planning cone for all players to see) for **1 round**. Deal **2 spell damage**. If the target is already revealed, deal **3 spell damage** instead.
 
