@@ -144,19 +144,13 @@ Cooldown: 3 rounds. Teleport to any allied structure.
 
 ---
 
-## Soren — The Ascended
+## Soren — The Word Smith
 
-> _The libraries of the old world held no answers for Soren. He devoured every scripture, debated every doctrine, knelt at every altar — and found only men's hands shaping gods in their own image. Faith, he concluded, was a mirror. He was ready to abandon the search entirely when a nameless hermit on a mountain path spoke seven words that unmade everything he knew._
+> _Reality, Soren discovered, is a language. Not a metaphor — a grammar. The world runs on statements older than matter, and he spent thirty years with five colleagues learning to read them. On the night they solved the Final Equation, he spoke it aloud. The words were true — so true that reality corrected itself around them. When the light faded, the five were gone. The Equation never explained whether it erased them, translated them, or simply moved them to a place where the math still permits their existence._
 >
-> _The path to ascension demanded everything. Soren gave it willingly. His name, his station, the wife who wept at the gate, the daughter too young to understand why her father was walking into the snow. He told himself they would understand when he returned. He told himself it would be worth it._
->
-> _Two centuries later, untouched by time and burning with cosmic truth, Soren stood before two gravestones weathered beyond reading. The hermit's final lesson — that transcendence cannot be shared, only earned — had never felt so cruel._
->
-> _Two millennia have passed. Soren has found others like him — ascended, eternal, equally hollow. They pass the eons trying to kill one another: assassins in the dark, poisons in the cup, traps that span decades. The games are elaborate, inventive, and the only thing that still stirs his heart._
->
-> _He tells the others he plays for the thrill. The truth is simpler: he is waiting for one of them to succeed._
+> _Something survived the correction. Fragments of the Equation lodged themselves in his voice. When he speaks them now the world hesitates — walls forget their edges, distance loses its nerve,_ _the space between things forgets what it was supposed to be. He doesn't know why the fragments chose him, or whether they're a gift or a splinter. He only knows the sentence is incomplete. He tells himself he's searching for the rest. He tells himself he wants an answer. A good scientist knows the difference between a hypothesis and a prayer. He stopped being sure which this was a century ago._
 
-**Role:** Intelligence Ranged Spellcaster
+**Role:** Intelligence Reality Editor / Controller
 **Attack:** Ranged (2 hexes)
 
 ### Stats
@@ -164,43 +158,51 @@ Cooldown: 3 rounds. Teleport to any allied structure.
 | Stat | Base | Scaling |
 |---|---|---|
 | HP | 13 | +5 per level |
-| Mana | 18 | +5 per level |
+| Mana | 20 | +5 per level |
 | Attack Damage | 1 | +1 at levels 3, 6, 9, 12, 15, 18 |
 | Defense | 1 | +1 at levels 6, 12, 18 |
 
 ### Abilities
 
-#### Passive — Death's Pupil
-
-When Soren would take lethal damage, he instead survives with **1 HP** and gains **+2 spell damage** on his next ability cast. Cooldown: **6 rounds**.
-
-#### 1 — First Word: Unveil
+#### 1 — Gnosis
 
 | Field | Value |
 |---|---|
 | Type | Targeted |
 | AP Cost | 1 |
 | Mana Cost | 7 |
-| Cooldown | 3 round |
+| Cooldown | 3 rounds |
 | Range | 2 hexes |
 
 Lift the target enemy's **planning cover** for all players to see for **1 round**, exposing their planned movement, AP tokens, and reaction tokens. Deal **2 spell damage**.
 
-#### 2 — Second Word: Sunder
+#### 2 — Reticence
 
 | Field | Value |
 |---|---|
 | Type | Targeted Curse |
 | AP Cost | 1 |
 | Mana Cost | 5 |
-| Cooldown | 1 round |
+| Cooldown | 3 round |
 | Range | 4 hexes |
 
 Place a mark on target enemy. On their next turn:
-- **If they cast a spell:** The mark detonates, dealing **6 spell damage** and **silencing** them for 1 round.
-- **If they do not cast a spell:** At the end of their turn, the mark fizzles and deals **3 spell damage**.
+- **If they cast a spell:** The mark detonates, dealing **4 spell damage** and **silencing** them for 1 round.
+- **If they do not cast a spell:** At the end of their turn, the mark expires and deals **2 spell damage**.
 
-#### Ultimate — The Seventh Word
+#### 3 — Pillar
+
+| Field | Value |
+|---|---|
+| Type | Terrain Creation |
+| AP Cost | 1 |
+| Mana Cost | 4 |
+| Cooldown | 2 rounds |
+| Range | 3 hexes |
+
+Target a hex. Soren raises a pillar on it. For **1 round**, the target hex is **impassable** to all units. Enemies occupying a hex adjacent to the pillar when it is raised take **1 spell damage** and are pushed **1 hex** away from the pillar (Soren chooses the push direction for each affected enemy).
+
+#### Ultimate — Collapse
 
 | Field | Value |
 |---|---|
