@@ -23,7 +23,7 @@
 
 ### 3.1 Team Size & Movement
 
-- **Team Size**: 3v3 (6 players/heroes total, Player 1–6).
+- **Team Size**: **2–10 players**, supporting any symmetric matchup from **1v1 up to 5v5**. Each team always has the same number of players (e.g., 1v1, 2v2, 3v3, 4v4, or 5v5). All rules in this document scale with the total player count unless stated otherwise.
 - **Movement**:
   - **Normal Movement**: A player can move up to **5 spaces (hexes)** per turn.
   - **First Round Boost**: For the very first round of the game, all players start with **12 movement** and **1 AP** to speed up rollout and laning setups.
@@ -160,7 +160,7 @@ A full round of the game represents a cycle of active lane pushes, neutral farmi
 ### 4.3 Phase 3: Half-Round Checkpoint (Turnaround)
 
 1. **Planning Phase**: All players plan simultaneously behind their covers for the descending half-round (Phase 4). Players place movement, AP, and reaction tokens into their hero board slots (see §3.8).
-2. **Backpack Cooldown Progress**: As player turns progress, swapped backpack items tick down their **6-turn cooldown** (equal to the number of players). Any swaps made at the start of Phase 2 become active here.
+2. **Backpack Cooldown Progress**: As player turns progress, swapped backpack items tick down their **N-turn cooldown** (where **N = total number of players in the game**). Any swaps made at the start of Phase 2 become active here.
 
 ### 4.4 Phase 4: Second Half-Round (Pendulum Play)
 
@@ -269,7 +269,7 @@ There are **3 towers in each lane**, which must be destroyed sequentially:
 - **Backpack Rules**:
   - Items in the backpack slot cannot be used and have no passive effects.
   - Swapping an item between the backpack and an active slot costs **0 AP**.
-  - **Cooldown**: An item swapped into an active slot is placed on cooldown for **6 player turns** (equal to the total number of players). It cannot be used or provide passive benefits during this cooldown.
+  - **Cooldown**: An item swapped into an active slot is placed on cooldown for **N player turns** (where **N = total number of players in the game**). It cannot be used or provide passive benefits during this cooldown.
 
 ### 7.4 Item Economy & Pricing Guidelines
 
